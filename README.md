@@ -1,2 +1,14 @@
-# poetic-alt-text
-Resource Build for the Fulton County Public Arts Future Lab, Spring 2026
+# Poetic and Artistic Alt Text
+
+## Key Questions
+- What is Poetic Alt Text?
+- How can we enable artists and curators to write poetic alt text?
+- How can we use the interpretive process of alt text authorship to expand access to visual art?
+
+## About this Resource
+This website is a digitized expansion
+
+## Community Partners
+This resource was developed for the Fulton County Public Arts Future Lab
+
+## References
