@@ -3,35 +3,58 @@
     <head>
         <title>Poetic Alt Text</title>
         <meta charset="utf-8" lang="en">
-        <link rel="stylesheet" href=""/>
+        <link rel="stylesheet" href="styles.css"/>
+        <script>
+            function openNav() {
+                document.getElementById("sidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+            function closeNav() {
+                document.getElementById("sidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            } 
+        </script>
     </head>
     <body>
         <a href="#main-content" hidde>Skip to main content</a> <!--https://www.webability.io/blog/skip-to-main-content-->
         <header>
             <h1>Poetic Alt Text</h1>
-            <nav>
-
-            </nav>
+            <a href="javascript:void(0)" onclick="openNav()">Open Menu</a>
+            <div id="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#altText101" title="Alt Text 101">Alt Text 101</a>
+                <a href="#artAndAltText" title="Art and Alt Text as Poetry">Art and Alt Text as Poetry</a>
+                <a href="#exercises">Interactive Exercises</a>
+                <a href="#references">References</a>
+            </div>
         </header>
         <main id="main-content">
             <div id="hero">
                 <div id="site_summary">
-                    <p>This website was developed for the <a href="" title="Link to the Public Arts Future Lab Website">Fulton County Public Arts Future Lab</a> to complement their ADA 36th Anniversary Celebration.</p>  
-                    <p>It is a digital adaptation and extension of the Alt Text as Poetry Workbook written by Shannon Finnegan and Bojana Coklyat as part of the <a hrerf="" title="Link to the Alt Text as Poetry Website">“Alt Text as Poetry” Project</a>.</p> 
+                    <p>This website was developed for the <a href="https://publicartfutureslab.com/" target="_blank" title="Link to the Public Art Futures Lab Website">Fulton County Public Art Futures Lab</a> to complement their ADA 36th Anniversary Celebration.</p>  
+                    <p>It is a digital adaptation and extension of the Alt Text as Poetry Workbook written by Shannon Finnegan and Bojana Coklyat as part of the <a href="https://alt-text-as-poetry.net/" target="_blank" title="Link to the Alt Text as Poetry Website">“Alt Text as Poetry” Project</a>.</p> 
                     <p>Our goal is to provide a resource to teach best practice about alt text and re-orient alt text authorship as a creative and connective exercise in meaning making. That is, we hope to present alt text as a poetic form of expression that could be particularly useful for artists in several media.</p>
                 </div>
                 <div id="preview_contents">
                     <div class="sectionLink">
-                        <p>Alt Text 101: What is alt text? Who is it for? How is it used?</p>
+                        <h2>Alt Text 101</h2>
+                        <p>What is alt text? Who is it for? How is it used?</p>
+                        <a href="#altText101" class="goToSection">Go to Alt Text 101</a>
                     </div>
                     <div class="sectionLink">
-                        <p>Art and Alt Text as Poetry: How does alt text make meaning? How does it translate visual information? How can be used in creative spaces?</p>
+                        <h2>Art and Alt Text as Poetry</h2>
+                        <p>How does alt text make meaning? How does it translate visual information? How can be used in creative spaces?</p>
+                        <a href="#altText101" class="goToSection">Go to Art and Alt Text as Poetry</a>
                     </div>
                     <div class="sectionLink">
-                        <p>Interactive Exercises: We have adapted the four exercises featured in the original workbook into digital interactives. Because we adapted them for individual use, we still recommend referring to the workbook and completing the original exercises with a partner as intended.</p>
+                        <h2>Interactive Exercises</h2>
+                        <p>We have adapted the four partnered exercises featured in the original workbook into individual digital activities.</p>
+                        <a href="#altText101" class="goToSection">Go to Interactive Exercises</a>
                     </div>
                     <div class="sectionLink">
-                        <p>References and more information: We are far from an authoritative source. Review our references, double check our information, and explore more on your own.</p>
+                        <h2>References</h2>
+                        <p>Review our references, double check our information, and explore more on your own.</p>
+                        <a href="#altText101" class="goToSection">Go to References</a>
                     </div>
                 </div>
             </div>
@@ -43,18 +66,64 @@
             <!--SECTION 2: Art and Alt Text as Poetry-->
             <div id="artAndAltText">
                 <h2>Section 2: Art and Alt Text as Poetry</h2>
+                    <p>Alt text can add or subtract to the information and perspective of an image. Well written alt text should aim to add as much and subtract as little as possible.</p>
+                    <blockquote>“Alt text won’t describe all of the information in the image, but the act of describing also adds information.” - <cite>"Alt Text as Poetry" Workbook</cite></blockquote>
+                    <p>The same image can be described in many different ways. The vocabulary, connotation, tone, and syntax used can create different interpretations. </p>
+                    <p>Variations in alt text of the same image may not be necessarily “better” or “worse” than another. How alt text is written should take into consideration the context and impact of the image.</p>
+                    <p>The information that is included or omitted in alt text affects how we interpret it. For the same image, one alt text may focus on the subject and content while another may focus more on the atmosphere and meaning.</p>
+                    <p>Artists involved in the creation of their own alt text can help to seamlessly integrate alt text with the image, making it part of the art instead of a last-minute consideration. However, artist involvement in alt text may accidentally create biases, describing intent rather than impact.</p>
             </div>
             <!--SECTION 3: INTERACTIVE EXERCISES-->
             <div id="exercises">
                 <h2>Section 3: Interactive Exercises</h2>
-                <div class="exercise" id="p1"></div>
-                <div class="exercise" id="p2"></div>
-                <div class="exervise" id="p3"></div>
-                <div class="exercise" id="p4"></div>
+                <p>These exercises are to be submitted separately so that feedback on descriptions can be better contextualized to each problem</p>
+                <div id="section3grid">
+                    <form class="exercise" id="p1">
+                        <h3>Exercise 1</h3>
+                        <input type="submit" value="Get Feedback on Exercise">
+                    </form>
+                    <form class="exercise" id="p2">
+                        <h3>Exercise 2</h3>
+                        <input type="submit" value="Get Feedback on Exercise">
+                    </form>
+                    <form class="exervise" id="p3">
+                        <h3>Exercise 3</h3>
+                        <input type="submit" value="Get Feedback on Exercise">
+                    </form>
+                    <form class="exercise" id="p4">
+                        <h3>Exercise 4</h3>
+                        <input type="submit" value="Get Feedback on Exercise">
+                    </form>
+                </div>
+                <p>To try describing images of your own (and for more information and examples), try visiting the <a href="https://poet.diagramcenter.org/" target="_blank" title="Poet Image Descripition Training Site">Poet Training Tool</a></p>
+                <details>
+                    <summary>Food for Thought/Reflection Questions</summary>
+                    <ul>
+                        <li>??</li>
+                    </ul>
+                </details>
             </div>
             <!--SECTION 4: REFRENCES-->
             <div id="references">
                 <h2>Section 4: References</h2>
+                <div class="refSection">
+                    <h3>On Alt Text</h3>
+                    <ul class="refList">
+
+                    </ul>
+                </div>
+                <div class="refSection">
+                    <h3>On Broader Image Descriptions</h3>
+                    <ul class="refList">
+
+                    </ul>
+                </div>
+                <div class="refSection">
+                    <h3>On Alt Text as Poetry/Alt Text for Art</h3>
+                    <ul class="refList">
+                        
+                    </ul>
+                </div>
             </div>
         </main>
     </body>
