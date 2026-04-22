@@ -89,7 +89,23 @@ main {
 /*SECTION 3*/
 #section3grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.25fr 1.25fr;
     padding: 20px;
+}
+.question {
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 10px;
+}
+details {
+    background-color: yellow;
+    border: 4px dotted black;
+    border-radius: 13px;
+    padding: 10px;
+    margin: 12px 0px;
+}
+form details {
+    width: 70%;
 }
 /*SECTION 4*/
