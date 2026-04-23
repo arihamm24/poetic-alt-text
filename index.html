@@ -4,6 +4,9 @@
         <title>Poetic Alt Text</title>
         <meta charset="utf-8" lang="en">
         <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script>
             function openNav() {
                 document.getElementById("sidebar").style.width = "250px";
@@ -13,6 +16,11 @@
                 document.getElementById("sidebar").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";
             } 
+            function displayImage() {
+                var image = document.getElementById("uploadImage").value;
+                document.getElementById("exercise2uploaded").src="image";
+                document.getElementById("exercise2uploaded").style.display="inline"; 
+            }
         </script>
     </head>
     <body>
@@ -58,20 +66,35 @@
                     </div>
                 </div>
             </div>
-            <!--SECTION1 1: ALT TEXT 101-->
+            <!--SECTION 1: ALT TEXT 101-->
             <div id="altText101">
                 <h2>Section 1: Alt Text 101</h2>
-
+                <p>Alternative text (more commonly written as alt text) is a written description of an image in a digital context. Alt text is usually written for websites, but should also be included in digital documents like PDFs, Word documents, and presentations.</p>
+                <p>It is an essential tool for digital accessibilty, and makes visual content accessible to blind/low-vision users and other users who rely on screen readers to interact with the web. Screen readers cannot interpret images, so alt text is embedded in code for web images for screen readers to read and convey the information to users!</p>
+                <p>It is part of a larger category called image descriptions, which includes alt text, audio descriptions (for video, audio, and live performance), and verbal descriptions (in museum contexts). Alt text and image description are used interchangeably on this site and the workbook from which it is adapted.</p>
             </div>
             <!--SECTION 2: Art and Alt Text as Poetry-->
             <div id="artAndAltText">
                 <h2>Section 2: Art and Alt Text as Poetry</h2>
-                    <p>Alt text can add or subtract to the information and perspective of an image. Well written alt text should aim to add as much and subtract as little as possible.</p>
-                    <blockquote>“Alt text won’t describe all of the information in the image, but the act of describing also adds information.” - <cite>"Alt Text as Poetry" Workbook</cite></blockquote>
-                    <p>The same image can be described in many different ways. The vocabulary, connotation, tone, and syntax used can create different interpretations. </p>
-                    <p>Variations in alt text of the same image may not be necessarily “better” or “worse” than another. How alt text is written should take into consideration the context and impact of the image.</p>
-                    <p>The information that is included or omitted in alt text affects how we interpret it. For the same image, one alt text may focus on the subject and content while another may focus more on the atmosphere and meaning.</p>
-                    <p>Artists involved in the creation of their own alt text can help to seamlessly integrate alt text with the image, making it part of the art instead of a last-minute consideration. However, artist involvement in alt text may accidentally create biases, describing intent rather than impact.</p>
+                    <div class="section2" id="howToWrite">
+                        <h3>Writing Alt Text</h3>
+                        <p>Alt text can add or subtract to the information and perspective of an image. Well written alt text should aim to add as much and subtract as little as possible.</p>
+                        <blockquote>“Alt text won’t describe all of the information in the image, but the act of describing also adds information.” - <cite>"Alt Text as Poetry" Workbook</cite></blockquote>
+                        <p>The information that is included or omitted in alt text affects how we interpret it. For the same image, one alt text may focus on the subject and content while another may focus more on the atmosphere and meaning.</p>
+                        <p>The same image can be described in many different ways. The vocabulary, connotation, tone, and syntax used can create different interpretations. </p>
+                        <p>Variations in alt text of the same image may not be necessarily “better” or “worse” than another. How alt text is written should take into consideration the context and impact of the image.</p>
+                        <div class="section2" id="conceptsList">
+                            <p><em>Here are a few generally accepted concepts for alt text authorship</em></p>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section2" id="forArtists">
+                        <h3>Alt Text and Interpreting the Arts</h3>
+                        <p>Artists involved in the creation of their own alt text can help to seamlessly integrate alt text with the image, making it part of the art instead of a last-minute consideration. However, artist involvement in alt text may accidentally create biases, describing intent rather than impact.</p>
+                    </div>
+                    
             </div>
             <!--SECTION 3: INTERACTIVE EXERCISES-->
             <div id="exercises">
@@ -117,8 +140,11 @@
                         <h3>Exercise 2: Subjectivity and Audience</h3>
                         <div class="exerciseContainer">
                             <div class="questionImage" id="exercise2">
-                                <label>Upload an image that you have taken:  </label>
-                                <input type="file" name="filename" accept="image/gif, image/jpeg, image/png">
+                                <form>
+                                    <label for="uploadImage">Upload an image that you have taken:  </label>
+                                    <input type="file" id="uploadImage" accept="image/*" onchange="upload">
+                                </form>
+                                <img id="exercise2uploaded" style="display: none;">
                             </div>
                             <div class="questionContainer">
                                 <div class="question">
@@ -173,37 +199,36 @@
                                 </details>
                             </div>
                         </div>
-                        <div class="answer" id="exercise3">
-                            <p>USER RESPONSE HERE</p>
-                        </div>
                     </form>
                     <!--PROBLEM 4-->
                     <form class="exercise" id="p4">
                         <h3>Exercise 4: Identity and Representation</h3>
                         <div class="exerciseContainer">
-                            <div class="question">
-                                <label>Describe yourself as you are today in 3–5 sentences. What would be important for someone to know if they couldn’t access visual information about you?</label>
-                                <textarea></textarea>
+                            <div class="questionImage" id="exercise4">
+                                <img src="./Headshot 3 - JO.png" width="300" alt="A brown haired woman sits at a café table holding a white mug in both hands. She is looking away from the camera to the left" />
                             </div>
-                            <div class="question">
-                                <label>Describe the person in the headshot in 3–5 sentences.</label>
-                                <textarea></textarea>
-                                <div class="questionImage" id="exercise4">
-
+                            <div class="questionContainer">
+                                <div class="question">
+                                    <label>Describe yourself as you are today in 3–5 sentences. What would be important for someone to know if they couldn’t access visual information about you?</label>
+                                    <textarea></textarea>
                                 </div>
+                                <div class="question">
+                                    <label>Describe the person in the headshot in 3–5 sentences.</label>
+                                    <textarea></textarea>
+                                </div>
+                                <details>
+                                    <summary>Food for Thought/Reflection Questions</summary>
+                                    <ul>
+                                        <li>Were there things you felt comfortable describing about yourself that you didn’t feel comfortable describing about someone else? Or vice versa?</li>
+                                        <li>What are some of the ways your identity and your politics impacted your approach to these descriptions?</li>
+                                        <li>In disability spaces, people are often asked to self-describe images of themselves. What are some pros and cons to this approach?</li>
+                                    </ul>
+                                </details>
                             </div>
                         </div>
-                        <details>
-                            <summary>Food for Thought/Reflection Questions</summary>
-                            <ul>
-                                <li>Were there things you felt comfortable describing about yourself that you didn’t feel comfortable describing about someone else? Or vice versa?</li>
-                                <li>What are some of the ways your identity and your politics impacted your approach to these descriptions?</li>
-                                <li>In disability spaces, people are often asked to self-describe images of themselves. What are some pros and cons to this approach?</li>
-                            </ul>
-                        </details>
+                        
                     </form>
                 </div>
-                <p>To try describing images of your own (and for more information and examples), try visiting the <a href="https://poet.diagramcenter.org/" target="_blank" title="Poet Image Descripition Training Site">Poet Training Tool</a></p>
             </div>
             <!--SECTION 4: REFRENCES-->
             <div id="references">
@@ -230,9 +255,18 @@
                     <h3>For the Interactive Exercises</h3>
                     <ul class="refList">
                         <li><a href="https://picsum.photos/" target="_blank">Lorem Picsum</a> a random image generator website</li>
+                        <li>To try describing images of your own (and for more information and examples), try visiting the <a href="https://poet.diagramcenter.org/" target="_blank" title="Poet Image Descripition Training Site">Poet Training Tool</a></li>
                     </ul>
                 </div>
             </div>
         </main>
+        <footer>
+            <h4>Thank you to our community partners</h4>
+            <div id="partnerLogos">
+                <img src="./pafl_logo.png" alt="public art futures lab logo" />
+                <img src="./gt_lmc.jpg" alt="Georgia Tech" />
+            </div>
+           
+        </footer>
     </body>
 </html>
