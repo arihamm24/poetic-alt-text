@@ -73,7 +73,7 @@ h3 {
     padding: 15px;
 }
 #hero p a {
-    color: var(--card);
+    color: var(--sec-bg1);
     font-style: italic;
 }
 #hero p a:hover {
@@ -104,12 +104,18 @@ h3 {
 .goToSection {
     background-color:var(--hero-bg);
     padding: 8px;
-    margin: 5px;
-    border:1px solid white;
+    margin: 0 auto;
+    width: fit-content;
     border-radius: 1rem;
     color: white;
-    text-decoration: none;
     font-weight: bold;
+}
+.goToSection a {
+    text-decoration: none;
+}
+.goToSection a:visited {
+    text-decoration: none;
+    color: white;
 }
 .section-div {
     padding: 25px;
@@ -174,6 +180,14 @@ summary {
     display: flex;
     flex-direction: row;
 }
+.formSubmit {
+    font-size: 12pt;
+    font-family: 'Atkinson Hyperlegible';
+    font-weight: 500;
+    font-style: oblique;
+    border-radius: 25px;
+    padding:8px;
+}
 /*SECTION 4*/
 #references {
     background-color: var(--sec-bg2);
@@ -196,4 +210,13 @@ footer {
 #partnerLogos img {
     height: 100px; 
     width: auto;
+}
+@media (max-width: 768px) {
+    .sectionLink h2 {
+        font-size: 16pt;
+    }
+    #section3grid{
+        display: flex;
+        flex-direction: column;
+    }
 }
