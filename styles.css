@@ -1,10 +1,12 @@
 :root {
     --bg:#ffffff;
-    --main-boxes: #a5a5a5;
-    --shadow:#5a5a5a;
+    --hero-bg: #0f4c7c;
+    --sec-bg1: #f8c9b8;
+    --sec-bg2: #acb9cc;
+    --card: #e57836;
     --text:#000000;
-    --link:#348af7;
-    font-family: 'Roboto', sans-serif;
+    --accent: #093a68;
+    font-family: 'Atkinson Hyperlegible', 'Roboto', sans-serif;
 }
 header {
     display: flex;
@@ -12,15 +14,31 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 10px;
+    padding: 0 25px;
     position: sticky;
     top:0;
+}
+a i {
+    font-size: 30px;
+}
+header a {
+    text-decoration: none;
+}
+h1 {
+    font-weight: 1400;
+}
+h2 {
+    font-weight: 700;
+}
+h3 {
+    font-weight: 550;
+    font-style: italic;
 }
 /*SIDEBAR MENU*/
 #sidebar {
     height: 100%;
     width:0;
-    background-color: #ffa3a3;
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -43,21 +61,28 @@ header {
   position: absolute;
   top: 25px;
   right: 25px;
-  font-size: 36px;
+  font-size: 30px;
   margin-left: 50px;
-}
-main {
-    padding: 10px;
 }
 /* HERO */
 #hero {
-    background-color: honeydew;
+    background-color: var(--hero-bg);
     justify-content: center;
     text-align: center;
     margin: 0 auto;
     padding: 15px;
 }
+#hero p a {
+    color: var(--card);
+    font-style: italic;
+}
+#hero p a:hover {
+    color: var(--white);
+    font-style:normal;
+    text-decoration: none;
+}
 #site_summary {
+    color: white;
     width: 75%;
     margin: 0 auto;
 }
@@ -68,6 +93,7 @@ main {
 }
 .sectionLink {
     border: 1px solid black;
+    background-color: var(--card);
     padding: 10px;
     margin: 5px;
     width: 20%;
@@ -76,7 +102,7 @@ main {
     border-radius: 1rem;
 }
 .goToSection {
-    background-color:var(--link);
+    background-color:var(--hero-bg);
     padding: 8px;
     margin: 5px;
     border:1px solid white;
@@ -85,19 +111,36 @@ main {
     text-decoration: none;
     font-weight: bold;
 }
+.section-div {
+    padding: 25px;
+    margin: 10px 0;
+}
 /*SECTION 1*/
+#altText101 {
+    background-color: var(--sec-bg1);
+}
 /*SECTION 2*/
+#artAndAltText {
+    background-color: var(--sec-bg2);
+}
 p {
     font-size: 14pt;
     line-height: 1.5em;
 }
 blockquote {
-    border-left: 2px solid lightgray;
+    margin: 0 auto;
+    background-color: var(--accent);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
     padding: 10px;
-    width: 60%;
-    font-size: 12pt;
+    width: 50%;
+    font-size: 14pt;
 }
 /*SECTION 3*/
+#exercises {
+    background-color: var(--sec-bg1);
+}
 #section3grid{
     display: grid;
     grid-template-columns: 1.5fr 1.5fr;
@@ -117,18 +160,25 @@ blockquote {
     margin: 20px 0;
 }
 details {
-    background-color: yellow;
-    border: 4px dotted black;
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    color:white;
     border-radius: 13px;
     padding: 10px;
     margin: 12px 0px;
+}
+summary {
+    font-weight: 550;
 }
 .exerciseContainer {
     display: flex;
     flex-direction: row;
 }
 /*SECTION 4*/
-
+#references {
+    background-color: var(--sec-bg2);
+}
+/*FOOTER*/
 footer {
     display: flex;
     flex-direction: column;
