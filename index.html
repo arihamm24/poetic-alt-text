@@ -16,21 +16,16 @@
             function closeNav() {
                 document.getElementById("sidebar").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";
-            } 
-            function displayImage() {
-                var image = document.getElementById("uploadImage").value;
-                document.getElementById("exercise2uploaded").src="image";
-                document.getElementById("exercise2uploaded").style.display="inline"; 
             }
         </script>
     </head>
     <body>
-        <a href="#main-content">Skip to main content</a> <!--https://www.webability.io/blog/skip-to-main-content-->
+        <a href="#main-content" class="skip">Skip to main content</a> <!--https://www.webability.io/blog/skip-to-main-content-->
         <header>
             <h1>Poetic Alt Text</h1>
-            <a href="javascript:void(0)" onclick="openNav()"><i class="fi fi-sr-menu-burger"></i></a>
+            <a class="openbtn" onclick="openNav()"><i class="fi fi-sr-menu-burger"></i></a>
             <div id="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fi fi-sr-cross"></i></a>
+                <a class="closebtn" onclick="closeNav()"><i class="fi fi-sr-cross"></i></a>
                 <a href="#altText101" title="Alt Text 101">Alt Text 101</a>
                 <a href="#artAndAltText" title="Art and Alt Text as Poetry">Art and Alt Text as Poetry</a>
                 <a href="#exercises">Interactive Exercises</a>
@@ -79,37 +74,64 @@
             <!--SECTION 1: ALT TEXT 101-->
             <div id="altText101" class="section-div">
                 <h2>Section 1: Alt Text 101</h2>
-                <p>Alternative text (more commonly written as alt text) is a written description of an image in a digital context. Alt text is usually written for websites, but should also be included in digital documents like PDFs, Word documents, and presentations.</p>
-                <p>It is an essential tool for digital accessibilty, and makes visual content accessible to blind/low-vision users and other users who rely on screen readers to interact with the web. Screen readers cannot interpret images, so alt text is embedded in code for web images for screen readers to read and convey the information to users!</p>
-                <p>It is part of a larger category called image descriptions, which includes alt text, audio descriptions (for video, audio, and live performance), and verbal descriptions (in museum contexts). Alt text and image description are used interchangeably on this site and the workbook from which it is adapted.</p>
+                <div class="section1" id="overview">
+                    <p>Alternative text (more commonly written as alt text) is a written description of an image in a digital context. Alt text is usually written for websites, but should also be included in digital documents like PDFs, Word documents, and presentations.</p>
+                    <p>It is an essential tool for digital accessibilty, and makes visual content accessible to blind/low-vision users and other users who rely on screen readers to interact with the web. Screen readers cannot interpret images, so alt text is embedded in code for web images for screen readers to read and convey the information to users!</p>
+                    <p>It is part of a larger category called image descriptions, which includes alt text, audio descriptions (for video, audio, and live performance), and verbal descriptions (in museum contexts). Alt text and image description are used interchangeably on this site and the workbook from which it is adapted.</p>
+                </div>
+                <div class="section1" id="keyTerms">
+                    <p><em>Some important terms and defintions to know:</em></p>
+                    <ul>
+                        <li><strong>Americans with Disabilities Act (ADA):</strong> a federal civil rights law that prohibits discrimination against people with disabilities in everyday activities.</li>
+                        <li><strong>Screen Readers:</strong> software programs that allow blind or visually impaired users to read the text that is displayed on the computer screen with a speech synthesizer or braille display</li>
+                        <li><strong>Web Content Accessibilty Guidelines (WCAG):</strong> a set of technical standards and reccommendations that help make the digital world accessible to people with disabilities. They are <strong>NOT</strong> laws, but should be followed by any ADA-compliant website</li>
+                    </ul>
+                </div>
             </div>
             <!--SECTION 2: Art and Alt Text as Poetry-->
             <div id="artAndAltText" class="section-div">
                 <h2>Section 2: Art and Alt Text as Poetry</h2>
                     <div class="section2" id="howToWrite">
-                        <h3>Writing Alt Text</h3>
                         <p>Alt text can add or subtract to the information and perspective of an image. Well written alt text should aim to add as much and subtract as little as possible.</p>
                         <blockquote>“Alt text won’t describe all of the information in the image, but the act of describing also adds information.” - <cite>"Alt Text as Poetry" Workbook</cite></blockquote>
                         <p>The information that is included or omitted in alt text affects how we interpret it. For the same image, one alt text may focus on the subject and content while another may focus more on the atmosphere and meaning.</p>
                         <p>The same image can be described in many different ways. The vocabulary, connotation, tone, and syntax used can create different interpretations. </p>
                         <p>Variations in alt text of the same image may not be necessarily “better” or “worse” than another. How alt text is written should take into consideration the context and impact of the image.</p>
-                        <div class="section2" id="conceptsList">
-                            <p><em>Here are a few generally accepted concepts for alt text authorship</em></p>
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="section2" id="forArtists">
                         <h3>Alt Text and Interpreting the Arts</h3>
-                        <p>Artists involved in the creation of their own alt text can help to seamlessly integrate alt text with the image, making it part of the art instead of a last-minute consideration. However, artist involvement in alt text may accidentally create biases, describing intent rather than impact.</p>
+                        <p>Artists involved in the creation of their own alt text can help to seamlessly integrate alt text with the image, making it part of the art instead of a last-minute consideration. Though artist involvement in alt text may accidentally create biases, describing intent rather than impact, it is crucial that artists and curators are involved in writing alt text because they are aware of the context of the work and the context in which it will be displayed. Therefore, we advise mindfully and critically approaching alt text authorship, involving screen reader users and anyone else who may be using the alt text whenever possible.</p>
+                         <div class="section2" id="conceptsList">
+                            <p><em>Here are a few general guidelines for writing alt text</em></p>
+                            <ul>
+                                <li>Alt text should be written in the same style as the narrative (aka the surrounding text)</li>
+                                <li>Use short, concise sentences. Aim for 1-2 sentences and/or 125-140 characters</li>
+                                <li>End with a period</li>
+                                <li>Check grammar and spelling</li>
+                            </ul>
+                        </div>
+                        <p>Writing poetic alt text for art is transforming a visual experience into something everyone can feel and understand. The goal is to capture the visual imagery and mood of the work so that blind or low-vision users actually feel a true sense of belonging in digital and cultural spaces. By using your own unique voice, you can make the alt text an integral part of the creative work itself, adding a deeper personal perspective that lives alongside the original piece.</p>
+                        <div class="section2" id="conceptsList">
+                            <p><em>Here are some recommendations from both sources and experts on both art and accessibilty:</em></p>
+                            <ul>
+                                <li>Describe the non-visual elements of a scene to engage senses beyond sight</li>
+                                <li>Embrace subjectivity and offer interpretations of mood, expressions, etc. Acknowledge that this interpretation does change the experience of viewing the artwork</li>
+                                <li>Describe the work as your eyes would naturally flow: from one focal point to another.</li>
+                                <li>Interpretation is <strong>NOT</strong> opinions. Do not include judgements of the work</li>
+                                <li>Don't repeat information provided in the label text. In fact, write the alt text and label text together!</li>
+                                <li>Offer alt text in the same languages as the label/exhibit/gallery text</li>
+                            </ul>
+                        </div>
+                        <h3>On Subjectivity</h3>
+                        <p>Although there is emotional subjectivity in poetic alt text, it is still important to remove bias and assumptions about the identities of people depicted within the art. Instead of assuming someone's gender or race/ethnicity, describe what you can actually see (like their skin tone, clothing, hairstyle, physical build, etc.) which respects the subject’s agency while providing a clear picture. Keep this in mind and you can maintain the essence of the visuals, and transform them into something that can be appreciated by many more people.</p>
                     </div>
                     
             </div>
             <!--SECTION 3: INTERACTIVE EXERCISES-->
             <div id="exercises" class="section-div">
                 <h2>Section 3: Interactive Exercises</h2>
-                <p>These exercises are to be submitted separately so that feedback on descriptions can be better contextualized to each problem</p>
+                <p>Given the above information, we offer the exercises below as an opportunity to practice general alt text authorship. As you complete the exercises, we encourage you to consider how these practices may be applied to describing your work.</p>
+                <p>We present these adapted exercises to offer hands-on practice with alt text authorship. Given that alt text is contextual and subjective, we felt it would be irresponsible to attempt to give feedback. Instead, we provide reflection questions with each exercise to expand your thinking.</p>
                 <div id="section3grid">
                     <!--PROBLEM 1-->
                     <form class="exercise" id="p1">
@@ -118,20 +140,22 @@
                             <div class="questionImage" id="exercise1">
                                 <img src="https://picsum.photos/300/400?random=1"/>
                             </div>
-                            <div class="questionContainer">
+                            <div class="questionContainer" id="question1">
                                 <div class="question">
                                     <label>List things (objects, people, stuff, nouns) that are present in the image or related to the image.</label>
                                     <textarea></textarea>
                                     <details>
                                         <summary>Food for Thought/Reflection Questions</summary>
                                         <ul>
-                                            <li></li>
+                                            <li>What's in the foreground? Background?</li>
+                                            <li>What catches your eye first?</li>
+                                            <li>What surprises you about the image?</li>
                                         </ul>
                                     </details>
                                 </div>
                                 <div class="question">
                                     <label>List descriptive words or adjectives that describe the image, a part of the image, or your response to it</label>
-                                    <textarea></textarea>
+                                    <textarea  id="p1-2"></textarea>
                                     <details>
                                         <summary>Food for Thought/Reflection Questions</summary>
                                         <ul>
@@ -143,47 +167,10 @@
                                 </div> 
                             </div>
                         </div>
-                        <button type="button" form="p1" class="formSubmit">Submit for Feedback</button>
-                    </form>
-                    <!--PROBLEM 2-->
-                    <form class="exercise" id="p2">
-                        <h3>Exercise 2: Subjectivity and Audience</h3>
-                        <div class="exerciseContainer">
-                            <div class="questionImage" id="exercise2">
-                                <div>
-                                    <label for="uploadImage">Upload an image that you have taken:  </label>
-                                    <input type="file" id="uploadImage" accept="image/*" onchange="upload">
-                                </div>
-                                <img id="exercise2uploaded" style="display: none;">
-                            </div>
-                            <div class="questionContainer">
-                                <div class="question">
-                                    <label>Describe this image as though you are a complete stranger who has stumbled across it for the first time. Pretend that you’ve never seen it before and have no context for the image.</label>
-                                    <textarea></textarea>
-                                    <details>
-                                        <summary>Food for Thought/Reflection Questions</summary>
-                                        <ul>
-                                            <li></li>
-                                        </ul>
-                                    </details>
-                                </div>
-                                <div class="question">
-                                    <label>Describe the image again, this time from your own perspective, as though you were describing it to your best friend.</label>
-                                    <textarea></textarea>
-                                    <details>
-                                        <summary>Food for Thought/Reflection Questions</summary>
-                                        <ul>
-                                            <li></li>
-                                        </ul>
-                                    </details>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" form="p2" class="formSubmit">Submit for Feedback</button>
                     </form>
                     <!--PROBLEM 3-->
                     <form class="exercise" id="p3">
-                        <h3>Exercise 3: Structure, Length, and Priorities</h3>
+                        <h3>Exercise 2: Structure, Length, and Priorities</h3>
                         <div class="exerciseContainer">
                             <div class="questionImage" id="exercise3">
                                 <img src="https://picsum.photos/300/400?random=2"/>
@@ -204,16 +191,17 @@
                                 <details>
                                     <summary>Food for Thought/Reflection Questions</summary>
                                     <ul>
-                                        <li></li>
+                                        <li>If you were using a screen reader, what would you want described in the image first?</li>
+                                        <li>How much detail do you actually need to provide?</li>
+                                        <li>Is three sentences too much? Was it difficult to find three important things?</li>
                                     </ul>
                                 </details>
                             </div>
                         </div>
-                        <button type="button" form="p3" class="formSubmit">Submit for Feedback</button>
                     </form>
                     <!--PROBLEM 4-->
                     <form class="exercise" id="p4">
-                        <h3>Exercise 4: Identity and Representation</h3>
+                        <h3>Exercise 3: Identity and Representation</h3>
                         <div class="exerciseContainer">
                             <div class="questionImage" id="exercise4">
                                 <img src="./Headshot 3 - JO.png" width="300" alt="A brown haired woman sits at a café table holding a white mug in both hands. She is looking away from the camera to the left" />
@@ -237,7 +225,6 @@
                                 </details>
                             </div>
                         </div>
-                        <button type="button" form="p4" class="formSubmit">Submit for Feedback</button>
                     </form>
                 </div>
             </div>
@@ -247,23 +234,23 @@
                 <div class="refSection">
                     <h3>On Alt Text</h3>
                     <ul class="refList">
-
-                    </ul>
-                </div>
-                <div class="refSection">
-                    <h3>On Broader Image Descriptions</h3>
-                    <ul class="refList">
-
+                        <li><a href="https://scholarworks.boisestate.edu/english_facpubs/365/" target="_blank">An Image for All</a> by Shereena Huntsman</li>
+                        <li><a href="https://axesslab.com/alt-texts/" target="_blank">Alt-texts: The Ultimate Guide</a> by Daniel Göransson</li>
+                        <li><a href="https://webaim.org/techniques/alttext/" target="_blank">Alternative Text</a> by WebAIM</li>
                     </ul>
                 </div>
                 <div class="refSection">
                     <h3>On Alt Text as Poetry/Alt Text for Art</h3>
                     <ul class="refList">
-
+                        <li><a href="www.cooperhewitt.org/cooper-hewitt-guidelines-for-image-description/" target="_blank">Cooper Hewitt Guidelines for Image Descriptions</a></li>
+                        <li><a href="https://insidesamfox.wustl.edu/about/communications/digital-accessibility/describing-art-design-images/" target="_blank">Alt-Text for Art & Design Images</a> from the Sam Fox School of Design and Visual Arts</li>
+                        <li><a href="https://staffartshow.harvard.edu/digital-accessibility-guidelines/#:~:text=Creating%20alt%20text%20for%20your%20artwork%3A&text=Aim%20for%20a%20detailed%20description,the%20medium%2C%20and%20the%20description.">Digital Accessibilty Guidelines for the Harvard Staff Art Show</a></li>
+                        <li><a href="https://aestheticsforbirds.com/2024/05/02/how-to-write-alt-text/">Alt Text for Artwork, Alt Text as Artwork</a>by Aaron Richardson (Simon Fraser University)</li>
+                        <li><a href="https://veroniiiica.com/how-to-write-alt-text-for-amateur-art/">How To Write Alt Text For Amateur Art</a> by Veronica with Four Eyes</li>
                     </ul>
                 </div>
                 <div class="refSection">
-                    <h3>For the Interactive Exercises</h3>
+                    <h3>Images for the Interactive Exercises</h3>
                     <ul class="refList">
                         <li><a href="https://picsum.photos/" target="_blank">Lorem Picsum</a> a random image generator website</li>
                         <li>To try describing images of your own (and for more information and examples), try visiting the <a href="https://poet.diagramcenter.org/" target="_blank" title="Poet Image Descripition Training Site">Poet Training Tool</a></li>

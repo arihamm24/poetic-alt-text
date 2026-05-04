@@ -18,6 +18,19 @@ header {
     position: sticky;
     top:0;
 }
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
 a i {
     font-size: 30px;
 }
@@ -57,6 +70,12 @@ h3 {
     display: block;
     transition: 0.3s;
 }
+.openbtn {
+    margin-top: 10px;
+}
+.openbtn:hover, .closebtn:hover {
+    cursor: pointer;
+}
 #sidebar .closebtn {
   position: absolute;
   top: 25px;
@@ -75,6 +94,7 @@ h3 {
 #hero p a {
     color: var(--sec-bg1);
     font-style: italic;
+    font-weight: 700;
 }
 #hero p a:hover {
     color: var(--white);
@@ -129,7 +149,7 @@ h3 {
 #artAndAltText {
     background-color: var(--sec-bg2);
 }
-p {
+p, ul, li {
     font-size: 14pt;
     line-height: 1.5em;
 }
@@ -173,20 +193,15 @@ details {
     padding: 10px;
     margin: 12px 0px;
 }
+details ul li {
+    font-size: 12pt;
+}
 summary {
     font-weight: 550;
 }
 .exerciseContainer {
     display: flex;
     flex-direction: row;
-}
-.formSubmit {
-    font-size: 12pt;
-    font-family: 'Atkinson Hyperlegible';
-    font-weight: 500;
-    font-style: oblique;
-    border-radius: 25px;
-    padding:8px;
 }
 /*SECTION 4*/
 #references {
