@@ -67,8 +67,13 @@ h3 {
     text-decoration: none;
     font-size: 16px;
     color: black;
+    font-weight: 700;
+    font-style: italic;
     display: block;
     transition: 0.3s;
+}
+.navLink:hover {
+    transform: scale(1.25);
 }
 .openbtn {
     margin-top: 10px;
@@ -83,12 +88,16 @@ h3 {
   font-size: 30px;
   margin-left: 50px;
 }
+main {
+    width: 100%;
+}
 /* HERO */
 #hero {
     background-color: var(--hero-bg);
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    min-width: fit-content;
     padding: 15px;
 }
 #hero p a {
@@ -116,6 +125,7 @@ h3 {
     background-color: var(--card);
     padding: 10px;
     margin: 5px;
+    min-width: min-content;
     width: 20%;
     text-align: center;
     align-content: center;
@@ -171,6 +181,7 @@ blockquote {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr;
     padding: 20px;
+    width: 100%;
 }
 .question, .questionContainer {
     display:flex;
