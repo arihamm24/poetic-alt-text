@@ -142,6 +142,7 @@ main {
 }
 .goToSection a {
     text-decoration: none;
+    color: white;
 }
 .goToSection a:visited {
     text-decoration: none;
